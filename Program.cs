@@ -265,30 +265,8 @@ void paso4_ingreso_coordenadas(int[,] tablero)
 }
 
 
-bool hay_barcos(int[,] tablero)//verifica si aun hay varcos en el tablero
-{
-    for (int f = 0; f < tablero.GetLength(0); f++)
-    {
-        for (int c = 0; c < tablero.GetLength(1); c++)
-        {
-            if (tablero[f, c] == 1)
-            {
-                return true;
-            }
-        }
-    }
-
-    return false;
-
-
-}
 
 paso1_crear_tablero(tablero);
 paso2_colocar_barcos(tablero);
 paso3_imprimir_tablero(tablero);
 paso4_ingreso_coordenadas(tablero);
-hay_barcos(tablero);
-while (hay_barcos(tablero))
-{
-    paso4_ingreso_coordenadas(tablero);
-}
